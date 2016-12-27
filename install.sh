@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update -y && apt-get upgrade -y
-apt-get install wget unzip nano software-properties-common mcrypt curl git sysv-rc-conf -y
+apt-get install wget unzip nano software-properties-common mcrypt curl git sysv-rc-conf ufw -y
 echo "Asia/Tokyo" | tee /etc/timezone
 
 dpkg-reconfigure --frontend noninteractive tzdata
@@ -37,7 +37,8 @@ echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf
 a2enmod rewrite
 service apache2 restart
 service mysql restart
-sys-rc-conf apache2 on
+sysv-rc-conf apache2 on
+sysv-rc-conf mysql on
 ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
