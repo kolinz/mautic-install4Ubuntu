@@ -40,4 +40,8 @@ MariaDB [(none)]> exit
 ## Step5：Webブラウザからセットアップ
 Webブラウザからサーバーにアクセスし、Mauticのセットアップを開始します。 <br>
 セットアップが完了しますと、ログイン画面が表示されます。英語画面なので、日本語画面に変更するには、下記の動画をご覧ください。<br>
-Mauticの日本語化：https://youtu.be/xw-YEvDBkss
+<a href="https://youtu.be/xw-YEvDBkss" target="_blank">Mauticの画面日本語化</a>　<br>
+<br>
+初めて、Mauticを使う方はハンズオン資料をご覧になることをオススメします。Mauticの基本機能について学ぶことができます。<br>
+<a href="http://www.slideshare.net/kolinz/mautic-68500817" target="_blank">第1回ハンズオン</a>　<br>
+<a href="http://www.slideshare.net/kolinz/mautic-70041536" target="_blank">第2回ハンズオン</a>　<br>
