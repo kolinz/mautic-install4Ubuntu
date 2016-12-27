@@ -42,6 +42,9 @@ Webブラウザからサーバーにアクセスし、Mauticのセットアッ�
 セットアップが完了しますと、ログイン画面が表示されます。英語画面なので、日本語画面に変更するには、下記の動画をご覧ください。<br>
 <a href="https://youtu.be/xw-YEvDBkss" target="_blank">Mauticの画面日本語化</a>　<br>
 <br>
+## その他
 初めて、Mauticを使う方はハンズオン資料をご覧になることをオススメします。Mauticの基本機能について学ぶことができます。<br>
 <a href="http://www.slideshare.net/kolinz/mautic-68500817" target="_blank">第1回ハンズオン</a>　<br>
 <a href="http://www.slideshare.net/kolinz/mautic-70041536" target="_blank">第2回ハンズオン</a>　<br>
+Mauticで使用するデータベースを冗長化構成済みのMySQLに変更する場合は、下記をご参照ください。 <br>
+<a href="https://kolinz.blogspot.jp/2016/12/mauticdb.html" target="_blank">MauticのDBを冗長化構成するときのポイント</a>　<br>
