@@ -10,9 +10,8 @@ apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74C
 add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.yz.yamagata-u.ac.jp/pub/dbms/mariadb/repo/10.1/ubuntu xenial main'
 apt-get update -y && apt-get install mariadb-client mariadb-server -y
 
-#install Apache2 and PHP 7.0.x, HAProxy
-LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
-apt-get update -y && apt-get install apache2 php php-common php-cli php-curl php-gd php-imap php-intl php-mbstring php-mcrypt php-mysql php-xml php-zip php-pear libapache2-mod-php haproxy -y
+#install Apache2 and PHP 7.0.x
+apt-get update -y && apt-get install apache2 php php-common php-cli php-curl php-gd php-imap php-intl php-mbstring php-mcrypt php-mysql php-xml php-zip php-pear libapache2-mod-php -y
 
 #install Mautic
 curl -sS https://getcomposer.org/installer | php
@@ -41,11 +40,18 @@ echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf
 a2enmod rewrite
 service apache2 restart
 service mysql restart
-sysv-rc-conf apache2 on
-sysv-rc-conf mysql on
+
+#Install Antivirus(ClamAV)
+apt-get install clamav -y
+sed -i -e "s/^NotifyClamd/#NotifyClamd/g" /etc/clamav/freshclam.conf
+freshclam
 
 #Allow Firewall Ports
 ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
 ufw allow 3306/tcp
+
+#Settings automatic start
+sysv-rc-conf apache2 on
+sysv-rc-conf mysql on
