@@ -11,6 +11,8 @@ install.shとcron-mautic.txtをコピー&ペーストするか、ダウンロー
 ポート 22 <br>
 ポート 80 <br>
 ポート 443 <br>
+ポート 587<br>
+ポート 993 <br>
 ポート 3306 <br>
 ```
 # chmod a+x install.sh
@@ -46,6 +48,10 @@ Webブラウザからサーバーにアクセスし、Mauticのセットアッ�
 ダウンロードしておいた「cron-mautic.txt」ファイルを用いて、cronの設定を行います。MauticではCronを用いて顧客情報の更新やメール送信などの定期処理をコマンドラインで実行します。
 ```
 # crontab cron-mautic.txt
+```
+cronが設定できたかどうか確認します。
+```
+# crontab -l
 ```
 <br>
 ## その他
