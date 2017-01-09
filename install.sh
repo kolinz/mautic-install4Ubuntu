@@ -18,8 +18,9 @@ apt-get update -y && apt-get install apache2 php php-common php-cli php-curl php
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 cd /usr/local/src/
-git clone https://github.com/mautic/mautic.git
-cd mautic/
+wget https://github.com/mautic/mautic/archive/master.zip
+unzip master.zip
+cd mautic-master/
 composer install
 cp -r /usr/local/src/mautic/ /var/www/html/mautic
 chown -R www-data:www-data /var/www/html/mautic/
