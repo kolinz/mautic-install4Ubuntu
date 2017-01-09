@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#For Ubuntu 16.04
 apt-get update -y && apt-get upgrade -y
 apt-get install wget unzip nano software-properties-common mcrypt curl git sysv-rc-conf ufw -y
 echo "Asia/Tokyo" | tee /etc/timezone
@@ -50,6 +51,8 @@ freshclam
 ufw allow 22/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
+ufw allow 587/tcp
+ufw allow 993/tcp
 ufw allow 3306/tcp
 
 #Settings automatic start
