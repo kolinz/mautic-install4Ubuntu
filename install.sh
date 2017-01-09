@@ -22,7 +22,7 @@ wget https://github.com/mautic/mautic/archive/master.zip
 unzip master.zip
 cd mautic-master/
 composer install
-cp -r /usr/local/src/mautic/ /var/www/html/mautic
+cp -r /usr/local/src/mautic-master/ /var/www/html/mautic
 chown -R www-data:www-data /var/www/html/mautic/
 
 #change php.ini, Apaceh2 Config Files
