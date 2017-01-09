@@ -1,0 +1,9 @@
+# m h  dom mon dow   command
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:segments:update --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:segments:update --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:campaigns:trigger --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:emails:send --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:email:fetch --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:webhooks:process --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:iplookup:download --env=prod
+*/10 * * * * sudo -u www-data /usr/bin/php7.0 /var/www/html/mautic/app console mautic:social:monitoring --env=prod
